@@ -15,7 +15,7 @@ def add_news(apps, schema_editor):
             "cover_image": "https://drive.google.com/uc?export=view&id=1p1fJucCTjgbb71U1dM21IN1hzRegmdoS",
             "content_image": "https://drive.google.com/uc?export=view&id=1p1fJucCTjgbb71U1dM21IN1hzRegmdoS",
             "is_active": True,
-            "author_name_news": "Gordo",
+            "author_name_news": "Thanos",
             "category_name_news": "Premier League",
         },
         {
@@ -45,7 +45,7 @@ def add_news(apps, schema_editor):
             "cover_image": "https://drive.google.com/uc?export=view&id=1QhIJKbQk16gIbeZfXKcAcAZNwrPEILu8",
             "content_image": "https://drive.google.com/uc?export=view&id=1QhIJKbQk16gIbeZfXKcAcAZNwrPEILu8",
             "is_active": True,
-            "author_name_news": "Gordo",
+            "author_name_news": "Thanos",
             "category_name_news": "Serie A",
         },
         {
@@ -75,7 +75,7 @@ def add_news(apps, schema_editor):
             "cover_image": "https://drive.google.com/uc?export=view&id=1CQuIyNrQf5PdlYfOVZJo0StmluzkLPoD",
             "content_image": "https://drive.google.com/uc?export=view&id=1CQuIyNrQf5PdlYfOVZJo0StmluzkLPoD",
             "is_active": True,
-            "author_name_news": "Gordo",
+            "author_name_news": "Thanos",
             "category_name_news": "Bundesliga",
         },
         {
@@ -105,7 +105,7 @@ def add_news(apps, schema_editor):
             "cover_image": "https://drive.google.com/uc?export=view&id=1o-KRG7Oxk_sbAgUrEX-Z5Oo3VVTsPxaX",
             "content_image": "https://drive.google.com/uc?export=view&id=1o-KRG7Oxk_sbAgUrEX-Z5Oo3VVTsPxaX",
             "is_active": True,
-            "author_name_news": "Gordo",
+            "author_name_news": "Thanos",
             "category_name_news": "Ligue 1",
         },
         {
