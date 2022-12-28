@@ -17,6 +17,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
+                <img class="p-1" src="https://drive.google.com/uc?export=view&id=1FUxa-J4jh6F8jYkVCNAJQ9XVl2SoIXMo" width="40px"/>
                 <a class="nav-item nav-link active" href="#">Home</a>
                 {% for category in categories %}
                     <a class="nav-item nav-link" href="{{ category.slug }}">{{ category.name }}</a>
@@ -24,20 +25,32 @@
             </div>
         </div>
     </nav>
-    
 
     <div class="container">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="https://drive.google.com/uc?export=view&id=1S_xtDwkKYz92mOhzM6lifWTE-dN6kcjV" alt="First slide">
-              </div>
+        <img src="https://drive.google.com/uc?export=view&id=1S_xtDwkKYz92mOhzM6lifWTE-dN6kcjV" class="img-fluid" alt="Responsive image">
+        
+        <div class="row">
+            <h1>NEWS PORTAL</h1><span>Noticias deportivas</span>
+        </div>
+        
+        <div class="row">
+            <h5 class="p-4">Categorías</h5>
+            <div class="card-group ">
+            {% for category in categories %}
+                <div class="card">
+                  <img class="card-img-top p-5" src="{{ category.cover_image }}" alt="Card image cap" />
+                  <div class="card-body text-center">
+                    <h5 class="card-title ">{{ category.name }}</h5>
+                    <a href="{{ category.slug }}" class="btn btn-light">Ver más</a>
+                  </div>
+                </div>
+            {% endfor %}
             </div>
         </div>
           
         <div class="row">
             <div class="col-sm mt-4">
-                <h5 class="text-center p-4">Últimas noticias</h5>
+                <h5 class="p-4">Recientemente en News Portal</h5>
                 <div class="d-flex flex-row justify-content-center">
                 {% for news in last_news %}
                     <div class="card m-3" style="width: 18rem;">
@@ -47,7 +60,7 @@
                             <p class="card-text">{{ news.extract }}</p>
                             <p class="card-text"><strong>Autor: </strong>{{ news.author }}</p>
                             <p class="card-text"><strong>Fecha: </strong>{{ news.create_at }}</p>
-                            <a href="{{ news.slug }}" class="btn btn-primary">Ver más</a>
+                            <a href="{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
                         </div>
                     </div>
                 {% endfor %}
