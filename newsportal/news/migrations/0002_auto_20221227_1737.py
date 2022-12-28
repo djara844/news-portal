@@ -9,18 +9,18 @@ def add_authors(apps, schema_editor):
 
     authors = [
         {
-            "name": "Gordo",
-            "image": "https://drive.google.com/uc?export=view&id=10C1puwyDw5TizQ870mPwfBWRxqvRyBm-",
+            "name": "Thanos",
+            "image": "https://drive.google.com/uc?export=view&id=1RWpzNFLva4Gz3W6yi2uyDhryqi4kUPS_",
             "is_active": True,
         },
         {
             "name": "Otto",
-            "image": "https://drive.google.com/uc?export=view&id=1p1fJucCTjgbb71U1dM21IN1hzRegmdoS",
+            "image": "https://drive.google.com/uc?export=view&id=1xaMwDQGfjgpw6lEuE7fMDhwbGIu-riW1",
             "is_active": True,
         },
         {
             "name": "Leo",
-            "image": "https://drive.google.com/uc?export=view&id=1hQKplhDA3bb0zJ2ankwdMq0EEKQkCRcq",
+            "image": "https://drive.google.com/uc?export=view&id=1NIPXRpfvoiQeh0L9hY7BT5ghFiVo-KOu",
             "is_active": True,
         },
     ]

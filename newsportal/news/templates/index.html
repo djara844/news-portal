@@ -11,10 +11,36 @@
 </head>
 <body>
     
+    <div class="container-fluid">
+        <button type="submit" class="btn btn-primary">
+            Botón prueba
+        </button>
 
-    <button type="submit" class="btn btn-primary">
-      Botón prueba
-    </button>
+        <div class="container-sm">
+            {% for author in authors %}
+                
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{{ author.image }}" class="img-fluid rounded-start" alt="Autor" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ author.name }}</h5>
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+            {% endfor %}
+        </div>
+      </div>
+
+    
+
+    
 
 
 </body>
