@@ -60,7 +60,7 @@
                             <p class="card-text">{{ news.extract }}</p>
                             <p class="card-text"><strong>Autor: </strong>{{ news.author }}</p>
                             <p class="card-text"><strong>Fecha: </strong>{{ news.create_at }}</p>
-                            <a href="{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
+                            <a href="{{ news.category_id }}/{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
                         </div>
                     </div>
                 {% endfor %}
@@ -77,13 +77,13 @@
                         <div class="card mb-3 text-center" style="width: 250px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                <img src="{{ author.image }}" class="img-fluid rounded m-2" alt="Autor" />
+                                    <img src="{{ author.image }}" class="img-fluid rounded m-2" alt="Autor" />
                                 </div>
                                 <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">{{ author.name }}</h5>
-                                    <button type="button" class="btn btn-secondary btn-sm">Ver</button>
-                                </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">{{ author.name }}</h5>
+                                        <a href="autores/{{ author.slug }}"><button type="button" class="btn btn-secondary btn-sm">Ver</button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>                
