@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autor</title>
-</head>
-<body>
-    <h1>Autor</h1>
-        <p>{{ author.name }}</p>
-</body>
-</html>
+{% extends "theme/base_generic.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm mt-4 mb-4">
+            <p class="h1 text-center">{{ author.name }}</p>
+            <img class="rounded mx-auto d-block mt-4" src="{{ author.image }}" alt="{{ author.name }}" />
+        </div>
+
+        <div>
+            <h5 class="p-4">Contenidos del autor:</h5>
+            <div class="d-flex flex-wrap justify-content-center">
+            {% for news in news_for_author %}
+                <div class="card m-3" style="width: 18rem;">
+                    <img class="card-img-top p-3" src="{{ news.cover_image }}" alt="{{ news.cover_image }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ news.title }}</h5>
+                        <p class="card-text">{{ news.extract }}</p>
+                        <p class="card-text"><strong>Fecha: </strong>{{ news.create_at }}</p>
+                        <a href="{{ news.category.slug }}/{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
