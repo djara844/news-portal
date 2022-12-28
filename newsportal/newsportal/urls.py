@@ -18,9 +18,15 @@ from django.urls import path
 
 from news.views import (
     home,
+    categories,
+    news,
+    authores,
 )
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name="index"),
+    path("autores/<slug:slug_author>/", authores, name="authores"),
+    path("<slug:slug_category>/", categories, name="categories"),
+    path("<slug:slug_category>/<slug:slug_news>/", news, name="news"),
 ]
