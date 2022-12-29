@@ -1,24 +1,26 @@
-{% extends "theme/base_generic.html" %}
+{% extends "layout/base_generic.html" %}
 {% block content %}
 <div class="container">
-    <img src="https://drive.google.com/uc?export=view&id=1S_xtDwkKYz92mOhzM6lifWTE-dN6kcjV" class="img-fluid" alt="Responsive image">
+    <img src="https://drive.google.com/uc?export=view&id=1S_xtDwkKYz92mOhzM6lifWTE-dN6kcjV" class="img-fluid" alt="Banner home">
     
     <div class="row">
         <h1>NEWS PORTAL</h1><span>Noticias deportivas</span>
     </div>
     
     <div class="row">
-        <h5 class="p-4">Categorías</h5>
-        <div class="card-group ">
-        {% for category in categories %}
-            <div class="card">
-                <img class="card-img-top p-5" src="{{ category.cover_image }}" alt="Card image cap" />
-                <div class="card-body text-center">
-                <h5 class="card-title ">{{ category.name }}</h5>
-                <a href="{{ category.slug }}" class="btn btn-light">Ver más</a>
-                </div>
+        <div class="col-sm mt-4">
+            <h5 class="p-4">Categorías</h5>
+            <div class="d-flex flex-wrap justify-content-center">
+            {% for category in categories %}
+                <div class="card m-3" style="width: 18rem;">
+                    <img class="card-img-top p-5" src="{{ category.cover_image }}" alt="{{ category.cover_image }}" />
+                    <div class="card-body text-center">
+                    <h5 class="card-title ">{{ category.name }}</h5>
+                    <a href="{{ category.slug }}" class="btn btn-light">Ver más</a>
+                    </div>
             </div>
-        {% endfor %}
+            {% endfor %}
+            </div>
         </div>
     </div>
         
@@ -28,7 +30,9 @@
             <div class="d-flex flex-wrap justify-content-center">
             {% for news in last_news %}
                 <div class="card m-3" style="width: 18rem;">
-                    <img class="card-img-top p-3" src="{{ news.cover_image }}" alt="Card image cap">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 280px;">
+                        <img class="card-img-top p-3" src="{{ news.cover_image }}" alt="{{ news.cover_image }}" style="max-height: 280px; width: auto;"/>
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">{{ news.title }}</h5>
                         <p class="card-text">{{ news.extract }}</p>
