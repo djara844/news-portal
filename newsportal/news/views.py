@@ -16,9 +16,8 @@ def categories(request, slug_category):
     if category.exists():
         category = category.first()
         news_category = News.objects.filter(category_id=category.id)
-
         categories = Category.objects.all()
-        context = {"news_category": news_category, "categories": categories}
+        context = {"news_category": news_category, "categories": categories, "category_name": category}
     else:
         return render(request, "404.html")
 

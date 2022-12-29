@@ -5,7 +5,6 @@
             <p class="h1 text-center">{{ author.name }}</p>
             <img class="rounded mx-auto d-block mt-4" src="{{ author.image }}" alt="{{ author.name }}" />
         </div>
-
         <div>
             <h5 class="p-4">Contenidos del autor:</h5>
             <div class="d-flex flex-wrap justify-content-center">
@@ -16,7 +15,7 @@
                         <h5 class="card-title">{{ news.title }}</h5>
                         <p class="card-text">{{ news.extract }}</p>
                         <p class="card-text"><strong>Fecha: </strong>{{ news.create_at }}</p>
-                        <a href="{{ news.category.slug }}/{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
+                        <a href="/{{ news.category.slug }}/{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
                     </div>
                 </div>
             {% endfor %}
