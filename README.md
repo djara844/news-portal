@@ -4,6 +4,10 @@
 
 Create news system.
 
+### Database structure 
+
+![alt text](https://drive.google.com/uc?export=view&id=1kZeqQoNnkbfPw0hAt_qbCI8BBWHJvnmk)
+
 ## Previous requirements
 
 Python (recommended version Python 3.9.10)
