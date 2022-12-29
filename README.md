@@ -1,16 +1,16 @@
 # NEWS PORTAL
 
-#### Test for T&T Interactiva
+### Test for T&T Interactiva
 
 Create news system.
 
-### Previous requirements
+## Previous requirements
 
 Python (recommended version Python 3.9.10)
 
 Virtualenv (recommended version virtualenv 20.14.1)
 
-### Quick installation with sqlite db
+## Quick installation with sqlite db
 
 1 Clone repo https://github.com/djara844/news-portal.git
 
@@ -45,7 +45,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### Installation with postgresql
+## Installation with postgresql
 
 1 Comment out the following lines in the settings.py file:
 
@@ -90,7 +90,7 @@ python manage.py migrate
 ```
 
 
-### Usage
+## Usage
 
 6 Run the project
 
