@@ -78,11 +78,8 @@ WSGI_APPLICATION = "newsportal.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "newsportal",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "localhost",
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "db.sqlite3",
     }
 }
 
