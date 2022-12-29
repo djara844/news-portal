@@ -1,16 +1,18 @@
 {% extends "layout/base_generic.html" %}
 {% block content %}
-    <div class="row">
-        <div class="col-sm mt-4">
-            {% for news_item in news %}
-                <div class="p-4">
-                    <h2 class="text-center pb-4">{{ news_item.title }}</h2>
-                    <p class=""><strong>Autor: </strong>{{ news_item.author }}</p>
-                    <p class="pb-4"><strong>Fecha: </strong>{{ news_item.create_at }}</p>
-                    <img class="img-fluid mx-auto d-block pb-4" src="{{ news_item.content_image }}" alt="{{ news_item.content_img }}" style="max-height: 300px;"/>
-                    <p class="pt-4">{{ news_item.content }}</p>
-                </div>
-             {% endfor %}
-        </div>
+
+<div class="row">
+    <div class="col-sm mt-4">
+        {% for news_item in news %}
+            <div class="p-4">
+                <h2 class="text-center pb-4">{{ news_item.title }}</h2>
+                <p class=""><strong>Autor: </strong>{{ news_item.author }}</p>
+                <p class="pb-4"><strong>Fecha: </strong>{{ news_item.create_at }}</p>
+                <img class="img-fluid mx-auto d-block pb-4" src="{{ news_item.content_image }}" alt="{{ news_item.content_img }}" style="max-height: 300px;"/>
+                <p class="pt-4">{{ news_item.content }}</p>
+            </div>
+            {% endfor %}
     </div>
+</div>
+
 {% endblock %}
