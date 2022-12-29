@@ -36,8 +36,8 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ news.title }}</h5>
                         <p class="card-text">{{ news.extract }}</p>
-                        <p class="card-text"><strong>Autor: </strong>{{ news.author }}</p>
-                        <p class="card-text"><strong>Fecha: </strong>{{ news.create_at }}</p>
+                        <p class="fw-lighter" style="font-size: 12px;"><strong>Autor: </strong>{{ news.author }}</p>
+                        <p class="fw-lighter" style="font-size: 12px;"><strong>Fecha: </strong>{{ news.create_at }}</p>
                         <a href="{{ news.category.slug }}/{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
                     </div>
                 </div>

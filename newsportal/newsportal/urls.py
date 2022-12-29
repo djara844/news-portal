@@ -26,7 +26,7 @@ from news.views import (
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name="index"),
-    path("autores/<slug:slug_author>/", authores, name="authores"),
+    path("autores/<slug:slug_author>/", authores, name="authors"),
     path("<slug:slug_category>/", categories, name="categories"),
     path("<slug:slug_category>/<slug:slug_news>/", news, name="news"),
 ]
