@@ -1,28 +1,29 @@
 {% extends "layout/base_generic.html" %}
 {% block content %}
-    <div class="row">
-        <div class="col-sm mt-4 mb-4">
-            <p class="h1 text-center">{{ author.name }}</p>
-            <img class="rounded mx-auto d-block mt-4" src="{{ author.image }}" alt="{{ author.name }}" />
-        </div>
-        <div>
-            <h5 class="p-4">Contenidos del autor:</h5>
-            <div class="d-flex flex-wrap justify-content-center">
-            {% for news in news_for_author %}
-                <div class="card m-3" style="width: 18rem;">
-                    <div class="d-flex align-items-center justify-content-center" style="height: 280px;">
-                        <img class="card-img-top p-3" src="{{ news.cover_image }}" alt="{{ news.cover_image }}" style="max-height: 280px; width: auto;"/>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ news.title }}</h5>
-                        <p class="card-text">{{ news.extract }}</p>
-                        <p class="card-text"><strong>Fecha: </strong>{{ news.create_at }}</p>
-                        <a href="/{{ news.category.slug }}/{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
-                    </div>
-                </div>
-            {% endfor %}
-            </div>
 
+<div class="row">
+    <div class="col-sm mt-4 mb-4">
+        <p class="h1 text-center">{{ author.name }}</p>
+        <img class="rounded mx-auto d-block mt-4" src="{{ author.image }}" alt="{{ author.name }}" />
+    </div>
+    <div>
+        <h5 class="p-4">Contenidos del autor:</h5>
+        <div class="d-flex flex-wrap justify-content-center">
+        {% for news in news_for_author %}
+            <div class="card m-3" style="width: 18rem;">
+                <div class="d-flex align-items-center justify-content-center" style="height: 280px;">
+                    <img class="card-img-top p-3" src="{{ news.cover_image }}" alt="{{ news.cover_image }}" style="max-height: 280px; width: auto;"/>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ news.title }}</h5>
+                    <p class="card-text">{{ news.extract }}</p>
+                    <p class="card-text"><strong>Fecha: </strong>{{ news.create_at }}</p>
+                    <a href="/{{ news.category.slug }}/{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
+                </div>
+            </div>
+        {% endfor %}
         </div>
     </div>
+</div>
+
 {% endblock %}

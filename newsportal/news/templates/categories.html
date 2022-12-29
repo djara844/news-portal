@@ -1,23 +1,23 @@
 {% extends "layout/base_generic.html" %}
 {% block content %}
 
-    <div class="row">
-        <h5 class="p-4">Noticias {{ category_name }}</h5>
-        <div class="d-flex flex-wrap justify-content-center">
-            {% for news in news_category %}
-            <div class="card m-3" style="width: 18rem;">
-                <img class="card-img-top p-3" src="{{ news.cover_image }}" alt="{{ news.cover_image }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ news.title }}</h5>
-                    <p class="card-text">{{ news.extract }}</p>
-                    <p class="card-text"><strong>Autor: </strong>{{ news.author }}</p>
-                    <p class="card-text"><strong>Fecha: </strong>{{ news.create_at }}</p>
-                    <a href="/{{ news.category.slug }}/{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
-                </div>
+<div class="row">
+    <h5 class="p-4">Noticias {{ category_name }}</h5>
+    <div class="d-flex flex-wrap justify-content-center">
+        {% for news in news_category %}
+        <div class="card m-3" style="width: 18rem;">
+            <img class="card-img-top p-3" src="{{ news.cover_image }}" alt="{{ news.cover_image }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ news.title }}</h5>
+                <p class="card-text">{{ news.extract }}</p>
+                <p class="card-text"><strong>Autor: </strong>{{ news.author }}</p>
+                <p class="card-text"><strong>Fecha: </strong>{{ news.create_at }}</p>
+                <a href="/{{ news.category.slug }}/{{ news.slug }}" class="btn btn-dark">Ver noticia</a>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
+</div>
     
     
 {% endblock %}
