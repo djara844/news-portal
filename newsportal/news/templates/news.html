@@ -1,4 +1,13 @@
 {% extends "theme/base_generic.html" %}
 {% block content %}
-    <h1>Plantilla News</h1>
+    <div class="row">
+        <div class="col-sm mt-4">
+            {% for news_item in news %}
+                <h2 class="text-center">{{ news_item.title }}</h2>
+                <img class="img-fluid" src="{{ news_item.content_image }}" alt="{{ news_item.content_img }}"/>
+                <p>{{ news_item.content }}</p>
+                <p><strong>Autor: </strong>{{ news_item.author }}</p>
+             {% endfor %}
+        </div>
+    </div>
 {% endblock %}
