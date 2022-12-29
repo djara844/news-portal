@@ -10,9 +10,10 @@ Create news system.
 
 ## Previous requirements
 
-Python (recommended version Python 3.9.10)
+Python (recommended version Python 3.9.10) -> `<link>` : <https://www.python.org/downloads/release/python-3910/>
 
-Virtualenv (recommended version virtualenv 20.14.1)
+
+Virtualenv (recommended version virtualenv 20.14.1) -> `<link>` : <https://pypi.org/project/virtualenv/20.14.1/>
 
 ## Quick installation with sqlite db
 
